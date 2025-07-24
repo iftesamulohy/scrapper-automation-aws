@@ -151,5 +151,9 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'fdf97858fc9a93'
 EMAIL_HOST_PASSWORD = 'cb639fb486c704'
 # DEFAULT_FROM_EMAIL = 'iftesamulohy@gmail.com'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
