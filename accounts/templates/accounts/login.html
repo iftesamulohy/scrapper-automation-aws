@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.6/dist/htmx.min.js" integrity="sha384-Akqfrbj/HpNVo8k11SXBb6TlBWmXXlYQrCSqEWmyKJe+hDm3Z/B2WVG4smwBkRVm" crossorigin="anonymous"></script>
+    <script>
+        // Toggle theme
+        function toggleTheme() {
+            document.documentElement.classList.toggle('dark');
+        }
+    </script>
+</head>
+<body class="min-h-screen flex items-center justify-center">
+    <div class="max-w-md w-full p-8 rounded-xl bg-gray-100 dark:bg-gray-800 shadow-md">
+        <h2 class="text-2xl font-bold text-center mb-4">Login</h2>
+
+        <div id="form-area" 
+            class="text-center" 
+            hx-get="{% url 'login_form' %}" 
+            hx-trigger="load" 
+            hx-swap="innerHTML">
+            Loading login form...
+        </div>
+
+        
+    </div>
+</body>
+</html>
